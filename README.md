@@ -8,6 +8,7 @@ it's helpfull especially for students and junior pen testers as for the scripts 
 =====================================================================================================================================
 
 [*]AnagramGen:
+
   This tool is used to create an initial dictionary for Brute Force attacks.
   all you need to do is to insert a list of strings which you think can be relevent, and let the AnagramGen create all the combinatins
   that can come out of it.
