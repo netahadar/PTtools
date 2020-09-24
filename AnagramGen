@@ -1,0 +1,29 @@
+def anagrams_generator( list_of_strings ):
+
+    '''
+    This function takes a list of strings,
+    and returns all the anagrams that can come out of each string.
+    :param list_of_strings: this are the strings to convert to anagrams.
+    :type list_of_strings: list.
+    :return list that contains lists of anagrams for each string.
+        '''
+
+    list_of_anagrams = [] #This is the final anagrams list
+
+    for string in list_of_strings:                                               #Converts the string to a list and craete new anagrams list for it
+        l = (list(string))
+        string_anagrams =[]
+
+        for letter in l:                                                         #Converts the string to an anagrarm and appends it to the anagrams list
+            for i in range((len(l) - 1)):
+               l[i], l [i+1] = l[i + 1], l[i]
+               new_anagram = ''.join(l)
+               if new_anagram not in string_anagrams:
+                    string_anagrams.append(''.join(l))
+
+        list_of_anagrams.append(string_anagrams)
+        return( list_of_anagrams )
+
+list_of_strings = [ #Here you put all the strings you want to convert ]
+
+anagrams_generator(list_of_strings)
